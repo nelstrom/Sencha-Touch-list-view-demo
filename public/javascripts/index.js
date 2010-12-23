@@ -87,6 +87,7 @@ Ext.setup({
                     width: Ext.is.Phone ? undefined : 300,
                     height: 500,
                     xtype: 'list',
+                    styleHtmlContent: true,
                     store: demos.ListStore,
                     itemTpl: '<div class="contact"><strong>{firstName}</strong> {lastName}</div>'
                 }]
@@ -102,6 +103,7 @@ Ext.setup({
                     width: Ext.is.Phone ? undefined : 300,
                     height: 500,
                     xtype: 'list',
+                    styleHtmlContent: true,
                     store: demos.ListStore,
                     itemTpl: '<div class="contact"><strong>{firstName}</strong> {lastName}</div>',
                     grouped: true,
@@ -119,6 +121,7 @@ Ext.setup({
                     width: Ext.is.Phone ? undefined : 300,
                     height: Ext.is.Phone ? undefined : 500,
                     xtype: 'list',
+                    styleHtmlContent: true,
                     onItemDisclosure: function(record, btn, index) {
                         Ext.Msg.alert('Tap', 'Disclose more info for ' + record.get('firstName'), Ext.emptyFn);
                     },
