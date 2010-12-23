@@ -73,62 +73,43 @@ Ext.setup({
             ]
         });
 
+        demos.simpleList = new Ext.List({
+            xtype: 'list',
+            store: demos.ListStore,
+            itemTpl: '<div class="contact">{firstName} {lastName}</div>'
+        });
+
+        demos.groupedList = new Ext.List({
+            store: demos.ListStore,
+            itemTpl: '<div class="contact">{firstName} {lastName}</div>',
+            grouped: true,
+            indexBar: true
+        });
+
+        demos.disclosureList = new Ext.List({
+            onItemDisclosure: function(record, btn, index) {
+                Ext.Msg.alert('Tap', 'Disclose more info for ' + record.get('firstName'), Ext.emptyFn);
+            },
+            store: demos.ListStore,
+            itemTpl: '<div class="contact">{firstName} {lastName}</div>'
+        });
+
         demos.List = new Ext.TabPanel ({
             fullscreen: true,
             items: [{
                 title: 'Simple',
-                layout: Ext.is.Phone ? 'fit' : {
-                    type: 'vbox',
-                    align: 'center',
-                    pack: 'center'
-                },
-                cls: 'demo-list',
-                items: [{
-                    width: Ext.is.Phone ? undefined : 300,
-                    height: 500,
-                    xtype: 'list',
-                    styleHtmlContent: true,
-                    store: demos.ListStore,
-                    itemTpl: '<div class="contact"><strong>{firstName}</strong> {lastName}</div>'
-                }]
+                items: [demos.simpleList]
             }, {
                 title: 'Grouped',
-                layout: Ext.is.Phone ? 'fit' : {
-                    type: 'vbox',
-                    align: 'center',
-                    pack: 'center'
-                },
-                cls: 'demo-list',
-                items: [{
-                    width: Ext.is.Phone ? undefined : 300,
-                    height: 500,
-                    xtype: 'list',
-                    styleHtmlContent: true,
-                    store: demos.ListStore,
-                    itemTpl: '<div class="contact"><strong>{firstName}</strong> {lastName}</div>',
-                    grouped: true,
-                    indexBar: true
-                }]
+                items: [demos.groupedList]
             }, {
                 title: 'Disclosure',
-                layout: Ext.is.Phone ? 'fit' : {
-                    type: 'vbox',
-                    align: 'center',
-                    pack: 'center'
-                },
+                items: [demos.disclosureList]
+            }],
+            defaults: {
+                layout: 'fit',
                 cls: 'demo-list',
-                items: [{
-                    width: Ext.is.Phone ? undefined : 300,
-                    height: Ext.is.Phone ? undefined : 500,
-                    xtype: 'list',
-                    styleHtmlContent: true,
-                    onItemDisclosure: function(record, btn, index) {
-                        Ext.Msg.alert('Tap', 'Disclose more info for ' + record.get('firstName'), Ext.emptyFn);
-                    },
-                    store: demos.ListStore, //getRange(0, 9),
-                    itemTpl: '<div class="contact"><strong>{firstName}</strong> {lastName}</div>'
-                }]
-            }]
+            }
         });
         
         
