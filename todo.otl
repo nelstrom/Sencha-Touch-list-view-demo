@@ -1,5 +1,6 @@
 [X] switch from `Ext.setup()` to `new Ext.Application()`
-[_] reveal a detail panel onItemDisclosure
+[X] reveal a detail panel onItemDisclosure
 	[X] add a toolbar to detailpanel, with back button
 	[X] add a template for detailpanel, and pass it the current item
-	[_] use a slide transition when switching active card
+	[X] use a slide transition when switching active card
+	[_] swap direction of transition
