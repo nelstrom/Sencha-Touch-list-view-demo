@@ -2,7 +2,7 @@ Ext.regModel('Contact', {
     fields: ['firstName', 'lastName']
 });
 
-demos.ListStore = new Ext.data.Store({
+ListDemo.ListStore = new Ext.data.Store({
     model: 'Contact',
     sorters: 'lastName',
     getGroupString : function(record) {
