@@ -46,11 +46,16 @@ ListDemo = new Ext.Application({
         ListDemo.Viewport = new Ext.Panel ({
             fullscreen: true,
             layout: 'card',
-            cardSwitchAnimation: {
-                type: 'slide',
-                direction: ListDemo.Viewport.getActiveItem().id == 'disclosurelist' ? 'left' : 'right'
-            },
-            items: [ListDemo.disclosureList, ListDemo.detailPanel]
+            cardSwitchAnimation: 'slide',
+            items: [ListDemo.disclosureList, ListDemo.detailPanel],
+            beforecardswitch: function(newCard, oldCard, index, animated) {
+                if (index === 1) {
+                    ListDemo.Viewport.cardSwitchAnimation.direction = 'right';
+                } else {
+                    ListDemo.Viewport.cardSwitchAnimation.direction = 'left';
+                }
+                return true;
+            }
         });
     }
 });
