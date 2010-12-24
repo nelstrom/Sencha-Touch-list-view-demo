@@ -19,6 +19,7 @@ ListDemo = new Ext.Application({
         ListDemo.disclosureList = new Ext.List({
             id: 'disclosurelist',
             onItemDisclosure: function(record, btn, index) {
+                ListDemo.detailPanel.update(record.data);
                 ListDemo.Viewport.setActiveItem('detailpanel');
             },
             store: ListDemo.ListStore,
@@ -27,7 +28,7 @@ ListDemo = new Ext.Application({
 
         ListDemo.detailPanel = new Ext.Panel({
             id: 'detailpanel',
-            html: 'Hello, world!',
+            tpl: 'Hello, {firstName}!',
             dockedItems: [
                 {
                     xtype: 'toolbar',
