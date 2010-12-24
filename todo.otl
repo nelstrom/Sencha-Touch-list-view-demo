@@ -1,2 +1,2 @@
-[_] switch from `Ext.setup()` to `new Ext.Application()`
+[X] switch from `Ext.setup()` to `new Ext.Application()`
 [_] reveal a detail panel onItemDisclosure
