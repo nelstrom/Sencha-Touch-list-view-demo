@@ -46,6 +46,7 @@ ListDemo = new Ext.Application({
         ListDemo.Viewport = new Ext.Panel ({
             fullscreen: true,
             layout: 'card',
+            cardSwitchAnimation: 'slide',
             items: [ListDemo.disclosureList, ListDemo.detailPanel]
         });
     }
