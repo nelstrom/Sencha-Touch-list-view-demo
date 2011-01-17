@@ -7,7 +7,7 @@ ListDemo = new Ext.Application({
             id: 'disclosurelist',
             onItemDisclosure: function(record, btn, index) {
                 ListDemo.detailPanel.update(record.data);
-                ListDemo.Viewport.setActiveItem('detailpanel');
+                ListDemo.Viewport.setActiveItem('detailpanel', {type:'slide',direction:'left'});
             },
             store: ListDemo.ListStore,
             itemTpl: '<div class="contact">{firstName} {lastName}</div>'
@@ -23,7 +23,7 @@ ListDemo = new Ext.Application({
                         text: 'back',
                         ui: 'back',
                         handler: function() {
-                            ListDemo.Viewport.setActiveItem('disclosurelist');
+                            ListDemo.Viewport.setActiveItem('disclosurelist', {type:'slide', direction:'right'});
                         }
                     }]
                 }
@@ -34,15 +34,7 @@ ListDemo = new Ext.Application({
             fullscreen: true,
             layout: 'card',
             cardSwitchAnimation: 'slide',
-            items: [ListDemo.disclosureList, ListDemo.detailPanel],
-            beforecardswitch: function(newCard, oldCard, index, animated) {
-                if (index === 1) {
-                    ListDemo.Viewport.cardSwitchAnimation.direction = 'right';
-                } else {
-                    ListDemo.Viewport.cardSwitchAnimation.direction = 'left';
-                }
-                return true;
-            }
+            items: [ListDemo.disclosureList, ListDemo.detailPanel]
         });
     }
 });
