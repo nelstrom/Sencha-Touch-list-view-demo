@@ -1,1 +1,1 @@
-![A list of contacts, grouped by last name](https://github.com/nelstrom/Sencha-Touch-list-view-demo/raw/01_basic_setup/screengrabs/grouped-list.png)
+![A grouped list with index bar](https://github.com/nelstrom/Sencha-Touch-list-view-demo/raw/03_list_with_index/screengrabs/grouped-list-with-index.png)
