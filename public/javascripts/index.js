@@ -7,7 +7,8 @@ ListDemo = new Ext.Application({
             id: 'disclosurelist',
             store: ListDemo.ListStore,
             itemTpl: '<div class="contact">{firstName} {lastName}</div>',
-            grouped: true
+            grouped: true,
+            indexBar: true
         });
 
         ListDemo.Viewport = new Ext.Panel ({
