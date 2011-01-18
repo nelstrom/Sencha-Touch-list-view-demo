@@ -6,18 +6,16 @@ ListDemo = new Ext.Application({
         ListDemo.detailPanel = new Ext.Panel({
             id: 'detailpanel',
             tpl: 'Hello, {firstName}!',
-            dockedItems: [
-                {
-                    xtype: 'toolbar',
-                    items: [{
-                        text: 'back',
-                        ui: 'back',
-                        handler: function() {
-                            ListDemo.Viewport.setActiveItem('disclosurelist');
-                        }
-                    }]
-                }
-            ]
+            dockedItems: [{
+                xtype: 'toolbar',
+                items: [{
+                    text: 'back',
+                    ui: 'back',
+                    handler: function() {
+                        ListDemo.Viewport.setActiveItem('disclosurelist');
+                    }
+                }]
+            }]
         });
 
         ListDemo.listPanel = new Ext.List({
