@@ -1,1 +1,1 @@
-![A grouped list with index bar](https://github.com/nelstrom/Sencha-Touch-list-view-demo/raw/03_list_with_index/screengrabs/grouped-list-with-index.png)
+![A grouped list with disclosure buttons](https://github.com/nelstrom/Sencha-Touch-list-view-demo/raw/04_add_detail_panels/screengrabs/list-with-detail-buttons.png)
