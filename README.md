@@ -1,15 +1,1 @@
-A demonstration of how the List View in Sencha Touch.
-
-Notes on models
----------------
-
-Notes on stores
----------------
-
-In the console, try running this:
-
-    demos.ListStore.sort('lastName', 'DESC')
-    demos.ListStore.sort('lastName', 'ASC')
-    demos.ListStore.filter('lastName', /Bu/)
-
-But how do you remove a filter?
+![A grouped list with index bar](https://github.com/nelstrom/Sencha-Touch-list-view-demo/raw/03_list_with_index/screengrabs/grouped-list-with-index.png)
