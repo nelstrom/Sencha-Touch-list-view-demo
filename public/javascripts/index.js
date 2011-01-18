@@ -11,6 +11,7 @@ ListDemo = new Ext.Application({
 
         ListDemo.Viewport = new Ext.Panel ({
             fullscreen: true,
+            layout: 'fit',
             items: [ListDemo.listPanel]
         });
     }
