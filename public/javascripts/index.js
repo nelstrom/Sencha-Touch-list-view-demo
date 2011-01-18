@@ -3,16 +3,6 @@ ListDemo = new Ext.Application({
 
     launch: function() {
 
-        ListDemo.disclosureList = new Ext.List({
-            id: 'disclosurelist',
-            onItemDisclosure: function(record, btn, index) {
-                ListDemo.detailPanel.update(record.data);
-                ListDemo.Viewport.setActiveItem('detailpanel', {type:'slide',direction:'left'});
-            },
-            store: ListDemo.ListStore,
-            itemTpl: '<div class="contact">{firstName} {lastName}</div>'
-        });
-
         ListDemo.detailPanel = new Ext.Panel({
             id: 'detailpanel',
             tpl: 'Hello, {firstName}!',
@@ -30,12 +20,25 @@ ListDemo = new Ext.Application({
             ]
         });
 
+        ListDemo.listPanel = new Ext.List({
+            id: 'disclosurelist',
+            store: ListDemo.ListStore,
+            itemTpl: '<div class="contact">{firstName} {lastName}</div>',
+            grouped: true,
+            onItemDisclosure: function(record, btn, index) {
+                ListDemo.detailPanel.update(record.data);
+                ListDemo.Viewport.setActiveItem('detailpanel');
+            }
+        });
+
         ListDemo.Viewport = new Ext.Panel ({
             fullscreen: true,
             layout: 'card',
             cardSwitchAnimation: 'slide',
-            items: [ListDemo.disclosureList, ListDemo.detailPanel]
+            items: [ListDemo.listPanel, ListDemo.detailPanel]
         });
+
     }
 });
+
 
