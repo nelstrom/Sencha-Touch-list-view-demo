@@ -4,7 +4,7 @@ ListDemo = new Ext.Application({
     launch: function() {
 
         ListDemo.listPanel = new Ext.List({
-            id: 'disclosurelist',
+            id: 'indexlist',
             store: ListDemo.ListStore,
             itemTpl: '<div class="contact">{firstName} {lastName}</div>'
         });
