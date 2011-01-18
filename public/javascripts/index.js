@@ -5,15 +5,15 @@ ListDemo = new Ext.Application({
 
         ListDemo.detailPanel = new Ext.Panel({
             id: 'detailpanel',
-            tpl: 'Hello, {firstName}!'
+            tpl: 'Hello, world!'
         });
 
         ListDemo.listPanel = new Ext.List({
             store: ListDemo.ListStore,
             itemTpl: '<div class="contact">{firstName} {lastName}</div>',
             grouped: true,
-            onItemDisclosure: function(record, btn, index) {
-                ListDemo.detailPanel.update(record.data);
+            onItemDisclosure: function() {
+                ListDemo.detailPanel.update();
                 ListDemo.Viewport.setActiveItem('detailpanel');
             }
         });
