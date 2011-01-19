@@ -12,14 +12,14 @@ ListDemo = new Ext.Application({
                     text: 'back',
                     ui: 'back',
                     handler: function() {
-                        ListDemo.Viewport.setActiveItem('disclosurelist');
+                        ListDemo.Viewport.setActiveItem('indexlist');
                     }
                 }]
             }]
         });
 
         ListDemo.listPanel = new Ext.List({
-            id: 'disclosurelist',
+            id: 'indexlist',
             store: ListDemo.ListStore,
             itemTpl: '<div class="contact">{firstName} {lastName}</div>',
             grouped: true,
