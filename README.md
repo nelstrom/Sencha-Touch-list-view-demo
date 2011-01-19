@@ -32,3 +32,24 @@ The tutorial includes several checkpoints:
 
 ![A detail panel with a back button](https://github.com/nelstrom/Sencha-Touch-list-view-demo/raw/master/screengrabs/detail-panel-back-button.png)
 
+
+# Using this repository to follow the screencast
+
+First, you'll have to clone this repository:
+
+    git clone git://github.com/nelstrom/Sencha-Touch-list-view-demo.git
+
+Change into the directory:
+
+    cd Sencha-Touch-list-view-demo
+
+By default, the git clone command will only create the master branch locally. If you want to study the code at each checkpoint, you will have to fetch each of the other branches. You can do so by running the following:
+
+    git checkout -b 00_blank_slate origin/00_blank_slate
+    git checkout -b 01_basic_setup origin/01_basic_setup
+    git checkout -b 02_grouped_list origin/02_grouped_list
+    git checkout -b 03_list_with_index origin/03_list_with_index
+    git checkout -b 04_add_generic_panel origin/04_add_generic_panel
+    git checkout -b 05_add_detail_panel origin/05_add_detail_panel
+    git checkout -b 06_add_back_button origin/06_add_back_button
+    git checkout -b 07_add_transitions origin/07_add_transitions
