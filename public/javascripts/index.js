@@ -9,6 +9,7 @@ ListDemo = new Ext.Application({
         });
 
         ListDemo.listPanel = new Ext.List({
+            id: 'indexlist',
             store: ListDemo.ListStore,
             itemTpl: '<div class="contact">{firstName} {lastName}</div>',
             grouped: true,
