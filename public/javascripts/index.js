@@ -3,19 +3,20 @@ ListDemo = new Ext.Application({
 
     launch: function() {
 
+        ListDemo.detailToolbar = new Ext.Toolbar({
+            items: [{
+                text: 'back',
+                ui: 'back',
+                handler: function() {
+                    ListDemo.Viewport.setActiveItem('indexlist');
+                }
+            }]
+        });
+
         ListDemo.detailPanel = new Ext.Panel({
             id: 'detailpanel',
             tpl: 'Hello, {firstName}!',
-            dockedItems: [{
-                xtype: 'toolbar',
-                items: [{
-                    text: 'back',
-                    ui: 'back',
-                    handler: function() {
-                        ListDemo.Viewport.setActiveItem('indexlist');
-                    }
-                }]
-            }]
+            dockedItems: [ListDemo.detailToolbar]
         });
 
         ListDemo.listPanel = new Ext.List({
