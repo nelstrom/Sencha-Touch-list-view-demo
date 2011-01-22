@@ -9,7 +9,9 @@ The tutorial includes several checkpoints:
 * [List disclosing a generic panel](https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/04_add_generic_panel)
 * [List disclosing a detail panel](https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/05_add_detail_panel)
 * [Adding a back button](https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/06_add_back_button)
-* [Adding transitions](https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/07_add_transitions)
+* [Adding a title to the detail panel](https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/07_add_title_to_detail_panel)
+* [Adding a title to the list panel](https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/08_add_title_to_list_panel)
+* [Adding transitions](https://github.com/nelstrom/Sencha-Touch-listeners-demo/tree/09_add_transitions)
 
 
 ## A vanilla list ##
@@ -52,4 +54,7 @@ By default, the git clone command will only create the master branch locally. If
     git checkout -b 04_add_generic_panel origin/04_add_generic_panel
     git checkout -b 05_add_detail_panel origin/05_add_detail_panel
     git checkout -b 06_add_back_button origin/06_add_back_button
-    git checkout -b 07_add_transitions origin/07_add_transitions
+    git checkout -b 07_add_title_to_detail_panel origin/07_add_title_to_detail_panel
+    git checkout -b 08_add_title_to_list_panel origin/08_add_title_to_list_panel
+    git checkout -b 09_add_transitions origin/09_add_transitions
+
