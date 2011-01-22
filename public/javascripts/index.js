@@ -3,19 +3,20 @@ ListDemo = new Ext.Application({
 
     launch: function() {
 
+        ListDemo.detailToolbar = new Ext.Toolbar({
+            items: [{
+                text: 'back',
+                ui: 'back',
+                handler: function() {
+                    ListDemo.Viewport.setActiveItem('indexlist');
+                }
+            }]
+        });
+
         ListDemo.detailPanel = new Ext.Panel({
             id: 'detailpanel',
             tpl: 'Hello, {firstName}!',
-            dockedItems: [{
-                xtype: 'toolbar',
-                items: [{
-                    text: 'back',
-                    ui: 'back',
-                    handler: function() {
-                        ListDemo.Viewport.setActiveItem('indexlist');
-                    }
-                }]
-            }]
+            dockedItems: [ListDemo.detailToolbar]
         });
 
         ListDemo.listPanel = new Ext.List({
@@ -23,7 +24,9 @@ ListDemo = new Ext.Application({
             store: ListDemo.ListStore,
             itemTpl: '<div class="contact">{firstName} {lastName}</div>',
             grouped: true,
-            onItemDisclosure: function(record, btn, index) {
+            onItemDisclosure: function(record) {
+                var name = record.data.firstName + " " + record.data.lastName;
+                ListDemo.detailToolbar.setTitle(name);
                 ListDemo.detailPanel.update(record.data);
                 ListDemo.Viewport.setActiveItem('detailpanel');
             }
