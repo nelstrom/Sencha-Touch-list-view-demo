@@ -23,7 +23,7 @@ ListDemo = new Ext.Application({
             store: ListDemo.ListStore,
             itemTpl: '<div class="contact">{firstName} {lastName}</div>',
             grouped: true,
-            onItemDisclosure: function(record, btn, index) {
+            onItemDisclosure: function(record) {
                 ListDemo.detailPanel.update(record.data);
                 ListDemo.Viewport.setActiveItem('detailpanel');
             }
