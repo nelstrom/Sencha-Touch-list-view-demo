@@ -8,7 +8,7 @@ ListDemo = new Ext.Application({
                 text: 'back',
                 ui: 'back',
                 handler: function() {
-                    ListDemo.Viewport.setActiveItem('indexlist');
+                    ListDemo.Viewport.setActiveItem('listwrapper');
                 }
             }]
         });
@@ -32,10 +32,20 @@ ListDemo = new Ext.Application({
             }
         });
 
+        ListDemo.listWrapper = new Ext.Panel({
+            id: 'listwrapper',
+            layout: 'fit',
+            items: [ListDemo.listPanel],
+            dockedItems: [{
+                xtype: 'toolbar',
+                title: 'Bond girls'
+            }]
+        });
+
         ListDemo.Viewport = new Ext.Panel ({
             fullscreen: true,
             layout: 'card',
-            items: [ListDemo.listPanel, ListDemo.detailPanel]
+            items: [ListDemo.listWrapper, ListDemo.detailPanel]
         });
 
     }
