@@ -8,7 +8,7 @@ ListDemo = new Ext.Application({
                 text: 'back',
                 ui: 'back',
                 handler: function() {
-                    ListDemo.Viewport.setActiveItem('listwrapper');
+                    ListDemo.Viewport.setActiveItem('listwrapper', {type:'slide', direction:'right'});
                 }
             }]
         });
