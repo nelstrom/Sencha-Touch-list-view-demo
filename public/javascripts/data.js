@@ -1,8 +1,9 @@
-Ext.regModel('Contact', {
+Ext.define('Contact', {
+    extend: 'Ext.data.Model',
     fields: ['firstName', 'lastName']
 });
 
-ListDemo.ListStore = new Ext.data.Store({
+var ListStore = Ext.create('Ext.data.Store', {
     model: 'Contact',
     sorters: 'lastName',
     getGroupString : function(record) {

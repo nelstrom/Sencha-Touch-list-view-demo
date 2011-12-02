@@ -1,41 +1,53 @@
-ListDemo = new Ext.Application({
+Ext.application({
     name: "ListDemo",
 
     launch: function() {
+        var detailPanel, listPanel, Viewport;
 
-        ListDemo.detailPanel = new Ext.Panel({
+        detailPanel = new Ext.Panel({
             id: 'detailpanel',
             tpl: 'Hello, {firstName}!',
-            dockedItems: [
+            scrollable: true,
+            items: [
                 {
                     xtype: 'toolbar',
+                    docked: 'top',
+                    title: 'details',
                     items: [{
                         text: 'back',
                         ui: 'back',
                         handler: function() {
-                            ListDemo.Viewport.setActiveItem('disclosurelist', {type:'slide', direction:'right'});
+                            Viewport.setActiveItem('disclosurelist', {type:'slide', direction:'right'});
                         }
                     }]
                 }
             ]
         });
 
-        ListDemo.listPanel = new Ext.List({
+        listPanel = new Ext.List({
             id: 'disclosurelist',
-            store: ListDemo.ListStore,
+            store: ListStore,
             itemTpl: '<div class="contact">{firstName} {lastName}</div>',
             grouped: true,
             onItemDisclosure: function(record, btn, index) {
-                ListDemo.detailPanel.update(record.data);
-                ListDemo.Viewport.setActiveItem('detailpanel');
+                detailPanel.setData(record.data);
+                Viewport.setActiveItem('detailpanel');
             }
         });
 
-        ListDemo.Viewport = new Ext.Panel ({
+        Viewport = new Ext.Panel ({
             fullscreen: true,
             layout: 'card',
             cardSwitchAnimation: 'slide',
-            items: [ListDemo.listPanel, ListDemo.detailPanel]
+            items: [
+                listPanel,
+                detailPanel,
+                {
+                    xtype : 'toolbar',
+                    docked: 'top',
+                    title: 'Bond girls'
+                }
+            ]
         });
 
     }
