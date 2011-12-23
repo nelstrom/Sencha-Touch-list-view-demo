@@ -8,7 +8,7 @@ Ext.define('ListDemo.view.Viewport', {
         items: [
             {
                 xtype: 'homepanel',
-                store: 'ListDemo.store.Bondgirls'
+                store: Ext.create('ListDemo.store.Bondgirls')
             },
             {
                 xtype: 'detailpanel'
