@@ -26,7 +26,7 @@ Ext.application({
 
         listPanel = new Ext.List({
             id: 'disclosurelist',
-            store: ListStore,
+            store: ListDemo.ListStore,
             itemTpl: '<div class="contact">{firstName} {lastName}</div>',
             grouped: true,
             onItemDisclosure: function(record, btn, index) {

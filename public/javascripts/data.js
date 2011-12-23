@@ -3,7 +3,7 @@ Ext.define('Contact', {
     fields: ['firstName', 'lastName']
 });
 
-var ListStore = Ext.create('Ext.data.Store', {
+ListDemo.ListStore = Ext.create('Ext.data.Store', {
     model: 'Contact',
     sorters: 'lastName',
     getGroupString : function(record) {
