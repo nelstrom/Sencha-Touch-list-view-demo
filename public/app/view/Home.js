@@ -1,10 +1,9 @@
 Ext.define('ListDemo.view.Home', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.List',
     xtype: 'homepanel',
     
     config: {
         title: 'Home',
-        iconCls: 'home',
-        cls: 'home',
+        itemTpl: '{firstName} {lastName}'
     }
 });
