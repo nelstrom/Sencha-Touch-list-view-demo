@@ -9,7 +9,7 @@ Ext.define('ListDemo.view.Viewport', {
             {
                 xtype: 'homepanel',
                 store: {
-                    fields: ['firstName', 'lastName'],
+                    model: 'ListDemo.model.Bondgirl',
                     data: [
                         { firstName: "Domino",      lastName: "Derval" },
                         { firstName: "Elektra",     lastName: "King" },
