@@ -1,13 +1,21 @@
 Ext.define('ListDemo.view.Viewport', {
-    extend: 'Ext.TabPanel',
+    extend: 'Ext.List',
     
     config: {
         fullscreen: true,
-        tabBarPosition: 'bottom',
-        
+        layout: 'card',
+        cardSwitchAnimation: 'slide',
         items: [
             {
                 xtype: 'homepanel'
+            },
+            {
+                xtype: 'detailpanel'
+            },
+            {
+                xtype : 'toolbar',
+                docked: 'top',
+                title: 'Bond girls'
             }
         ]
     }

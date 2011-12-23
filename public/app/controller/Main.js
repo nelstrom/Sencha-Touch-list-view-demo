@@ -1,7 +1,7 @@
 Ext.define('ListDemo.controller.Main', {
     extend: 'Ext.app.Controller',
     
-    views: ['Home'],
+    views: ['Viewport', 'Home', 'Detail'],
     
     refs: [],
     
