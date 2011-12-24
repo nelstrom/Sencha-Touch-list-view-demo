@@ -8,7 +8,8 @@ Ext.define('ListDemo.view.Viewport', {
         items: [
             {
                 xtype: 'homepanel',
-                store: Ext.create('ListDemo.store.Bondgirls')
+                id: 'bondgirlsList',
+                store: Ext.create('ListDemo.store.Bondgirls'),
             },
             {
                 xtype: 'detailpanel'

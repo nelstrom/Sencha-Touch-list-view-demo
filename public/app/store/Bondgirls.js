@@ -1,6 +1,10 @@
 Ext.define('ListDemo.store.Bondgirls', {
     extend: 'Ext.data.Store',
     model: 'ListDemo.model.Bondgirl',
+    sorters: 'lastName',
+    getGroupString : function(record) {
+        return record.get('lastName')[0];
+    },
     data: [
         { firstName: "Domino",      lastName: "Derval" },
         { firstName: "Elektra",     lastName: "King" },

@@ -4,6 +4,7 @@ Ext.define('ListDemo.view.Home', {
     
     config: {
         title: 'Home',
+        grouped: true,
         itemTpl: '{firstName} {lastName}'
     }
 });
