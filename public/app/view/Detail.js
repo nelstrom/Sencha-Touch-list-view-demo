@@ -4,6 +4,7 @@ Ext.define('ListDemo.view.Detail', {
     id: 'bondgirlDetail',
 
     config: {
+        styleHtmlContent: true,
         tpl: [
             'Hello {firstName}!'
         ]

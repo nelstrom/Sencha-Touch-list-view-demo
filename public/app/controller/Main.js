@@ -39,9 +39,7 @@ Ext.define('ListDemo.controller.Main', {
         var detail = this.getDetailpanel();
         console.log(record);
 
-        detail.setData(record);
-        // detail.setHtml();
-
+        detail.setData(record.data);
         this.getViewport().setActiveItem('bondgirlDetail');
         this.getBackButton().show();
     }
