@@ -1,10 +1,9 @@
-Ext.define('ListDemo.view.Home', {
+Ext.define('ListDemo.view.List', {
     extend: 'Ext.List',
-    xtype: 'homepanel',
+    xtype: 'listpanel',
     id: 'bondgirlList',
     
     config: {
-        title: 'Home',
         grouped: true,
         itemTpl: '{firstName} {lastName}'
     }
