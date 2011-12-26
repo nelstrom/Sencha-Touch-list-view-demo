@@ -4,8 +4,10 @@ Ext.define('ListDemo.view.Viewport', {
     
     config: {
         fullscreen: true,
-        layout: 'card',
-        animation: 'slide',
+        layout: {
+            type: 'card',
+            animation: 'slide',
+        },
         items: [
             {
                 xtype: 'homepanel',
