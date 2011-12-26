@@ -25,7 +25,7 @@ Ext.define('ListDemo.view.Viewport', {
                         text: 'back',
                         ui: 'back',
                         action: 'back',
-                        // hidden: true
+                        hidden: true
                     }
                 ]
             }

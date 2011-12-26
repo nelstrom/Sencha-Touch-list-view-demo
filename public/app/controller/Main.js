@@ -37,6 +37,7 @@ Ext.define('ListDemo.controller.Main', {
 
     showDetail: function(dataview, record) {
         console.log(record);
+        this.getViewport().setActiveItem(1);
         this.getBackButton().show();
     }
 
