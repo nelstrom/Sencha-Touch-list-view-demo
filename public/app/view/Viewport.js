@@ -15,7 +15,7 @@ Ext.define('ListDemo.view.Viewport', {
                 xtype: 'detailpanel',
             },
             {
-                xtype : 'toolbar',
+                xtype : 'titlebar',
                 docked: 'top',
                 title: 'Bond girls',
                 items: [
