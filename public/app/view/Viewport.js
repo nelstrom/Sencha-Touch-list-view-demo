@@ -5,16 +5,14 @@ Ext.define('ListDemo.view.Viewport', {
     config: {
         fullscreen: true,
         layout: 'card',
-        cardSwitchAnimation: 'slide',
+        animation: 'slide',
         items: [
             {
                 xtype: 'homepanel',
-                id: 'bondgirlsList',
                 store: Ext.create('ListDemo.store.Bondgirls'),
             },
             {
                 xtype: 'detailpanel',
-                id: 'bondgirlDetail'
             },
             {
                 xtype : 'toolbar',

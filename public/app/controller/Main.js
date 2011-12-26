@@ -11,7 +11,7 @@ Ext.define('ListDemo.controller.Main', {
         },
         {
             ref: 'detailpanel',
-            selector: '.detailpanel'
+            selector: '#bondgirlDetail'
         },
         {
             ref: 'backButton',
@@ -32,12 +32,17 @@ Ext.define('ListDemo.controller.Main', {
 
     showList: function() {
         this.getBackButton().hide();
-        this.getViewport().setActiveItem(0);
+        this.getViewport().setActiveItem('bondgirlList');
     },
 
     showDetail: function(dataview, record) {
+        var detail = this.getDetailpanel();
         console.log(record);
-        this.getViewport().setActiveItem(1);
+
+        detail.setData(record);
+        // detail.setHtml();
+
+        this.getViewport().setActiveItem('bondgirlDetail');
         this.getBackButton().show();
     }
 

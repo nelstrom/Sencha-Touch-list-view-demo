@@ -1,5 +1,11 @@
 Ext.define('ListDemo.view.Detail', {
     extend: 'Ext.Panel',
     xtype: 'detailpanel',
-    html: 'blah'
+    id: 'bondgirlDetail',
+
+    config: {
+        tpl: [
+            'Hello {firstName}!'
+        ]
+    }
 });
