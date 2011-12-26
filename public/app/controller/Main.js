@@ -22,14 +22,22 @@ Ext.define('ListDemo.controller.Main', {
     init: function() {
         this.control({
             'button[action=back]': {
-                tap: 'returnToList'
+                tap: 'showList'
+            },
+            'list': {
+                select: 'showDetail'
             }
         })
     },
 
-    returnToList: function() {
+    showList: function() {
         this.getBackButton().hide();
         this.getViewport().setActiveItem(0);
+    },
+
+    showDetail: function(dataview, record) {
+        console.log(record);
+        this.getBackButton().show();
     }
 
 });
