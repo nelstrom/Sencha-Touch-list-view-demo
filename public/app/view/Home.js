@@ -5,6 +5,9 @@ Ext.define('ListDemo.view.Home', {
     config: {
         title: 'Home',
         grouped: true,
-        itemTpl: '{firstName} {lastName}'
+        itemTpl: '{firstName} {lastName}',
+        onItemDisclosure: function() {
+            viewport.setActiveItem('bondgirlDetail');
+        }
     }
 });

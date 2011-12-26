@@ -12,7 +12,8 @@ Ext.define('ListDemo.view.Viewport', {
                 store: Ext.create('ListDemo.store.Bondgirls'),
             },
             {
-                xtype: 'detailpanel'
+                xtype: 'detailpanel',
+                id: 'bondgirlDetail'
             },
             {
                 xtype : 'toolbar',

@@ -8,6 +8,6 @@ Ext.application({
     controllers: ['Main'],
     
     launch: function() {
-        Ext.create('ListDemo.view.Viewport');
+        window.viewport = Ext.create('ListDemo.view.Viewport');
     }
 });

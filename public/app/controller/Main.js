@@ -4,8 +4,13 @@ Ext.define('ListDemo.controller.Main', {
     models: ['Bondgirl'],
     views: ['Viewport', 'Home', 'Detail'],
     
-    refs: [],
+    refs: [
+        {
+            ref: 'viewport',
+            selector: '.viewport'
+        }
+    ],
     
     init: function() {}
-    
+
 });
