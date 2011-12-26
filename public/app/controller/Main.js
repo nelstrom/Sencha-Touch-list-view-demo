@@ -28,9 +28,8 @@ Ext.define('ListDemo.controller.Main', {
     },
 
     returnToList: function() {
-        var viewport = this.getViewport();
-
-        viewport.setActiveItem(0);
+        this.getBackButton().hide();
+        this.getViewport().setActiveItem(0);
     }
 
 });

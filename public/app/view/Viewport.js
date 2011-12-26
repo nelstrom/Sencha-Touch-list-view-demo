@@ -22,9 +22,10 @@ Ext.define('ListDemo.view.Viewport', {
                 title: 'Bond girls',
                 items: [
                     {
-                        text: 'asdf',
+                        text: 'back',
                         ui: 'back',
-                        action: 'back'
+                        action: 'back',
+                        // hidden: true
                     }
                 ]
             }
