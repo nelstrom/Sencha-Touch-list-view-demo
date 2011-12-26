@@ -6,7 +6,7 @@ Ext.define('ListDemo.view.Viewport', {
         fullscreen: true,
         layout: {
             type: 'card',
-            animation: 'slide',
+            animation: 'slide'
         },
         items: [
             {

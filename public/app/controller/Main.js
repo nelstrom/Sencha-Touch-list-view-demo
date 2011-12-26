@@ -31,13 +31,25 @@ Ext.define('ListDemo.controller.Main', {
     },
 
     showList: function() {
+        var viewport = this.getViewport();
+
+        viewport.getLayout().setAnimation({
+            type: 'slide',
+            direction: 'right'
+        });
+        viewport.setActiveItem('bondgirlList');
         this.getBackButton().hide();
-        this.getViewport().setActiveItem('bondgirlList');
     },
 
     showDetail: function(dataview, record) {
+        var viewport = this.getViewport();
+
         this.getDetailpanel().setData(record.data);
-        this.getViewport().setActiveItem('bondgirlDetail');
+        viewport.getLayout().setAnimation({
+            type: 'slide',
+            direction: 'left'
+        });
+        viewport.setActiveItem('bondgirlDetail');
         this.getBackButton().show();
     }
 
