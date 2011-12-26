@@ -7,7 +7,7 @@ Ext.define('ListDemo.controller.Main', {
     refs: [
         {
             ref: 'viewport',
-            selector: '.viewport'
+            selector: '#rootpanel'
         },
         {
             ref: 'detailpanel',
@@ -15,7 +15,7 @@ Ext.define('ListDemo.controller.Main', {
         },
         {
             ref: 'backButton',
-            selector: '.detailpanel'
+            selector: 'button[action=back]'
         }
     ],
     
@@ -28,8 +28,9 @@ Ext.define('ListDemo.controller.Main', {
     },
 
     returnToList: function() {
-        this.getViewport().setActiveItem(0);
-        console.log('asdf');
+        var viewport = this.getViewport();
+
+        viewport.setActiveItem(0);
     }
 
 });

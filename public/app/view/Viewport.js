@@ -1,5 +1,6 @@
 Ext.define('ListDemo.view.Viewport', {
     extend: 'Ext.List',
+    id: 'rootpanel',
     
     config: {
         fullscreen: true,
