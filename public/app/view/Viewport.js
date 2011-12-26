@@ -18,7 +18,14 @@ Ext.define('ListDemo.view.Viewport', {
             {
                 xtype : 'toolbar',
                 docked: 'top',
-                title: 'Bond girls'
+                title: 'Bond girls',
+                items: [
+                    {
+                        text: 'asdf',
+                        ui: 'back',
+                        action: 'back'
+                    }
+                ]
             }
         ]
     }
